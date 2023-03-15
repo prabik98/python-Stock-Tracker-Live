@@ -38,9 +38,6 @@ async def stockTracker(request):
     thread_list = []
     que = queue.Queue()
     start = time.time()
-    # for i in stockpicker:
-    #     result = get_quote_table(i)
-    #     data.update({i: result})
     for i in range(n_threads):
         thread = Thread(target = lambda q, arg1: q.put({stockpicker[i]: get_quote_table(arg1)}), args = (que, stockpicker[i]))
         thread_list.append(thread)
