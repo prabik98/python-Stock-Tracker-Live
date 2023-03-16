@@ -9,10 +9,9 @@ StockPicker
 {% endblock %}
 {% block body %}
 <div class="container">
-    <h1>Live Stock Tracker</h1>
-    <p>Select your favourite stocks.</p>
+    <h1>STOCK TRACKER LIVE</h1>
     <form action="/stocktracker">
-        <label for="stockpicker">Select Stocks:</label>
+        <label for="stockpicker">SELECT YOUR STOCKS TO TRACK-</label>
         <select class="form-select form-select-lg mb-3" multiple aria-label="multiple select example"
             name="stockpicker">
             {% for i in stockpicker %}
